@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: rbraaksm <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/15 09:39:12 by rbraaksm       #+#    #+#                */
-/*   Updated: 2019/11/24 20:22:30 by rbraaksm      ########   odam.nl         */
+/*   Created: 2019/11/15 09:39:12 by rbraaksm      #+#    #+#                 */
+/*   Updated: 2021/03/03 13:09:13 by rbraaksm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_making_buf(int const fd, char *bufin, int *ret)
 		}
 		buf[*ret] = '\0';
 		tmp = bufin;
-		bufin = ft_strjoin((const char*)bufin, buf);
+		bufin = ft_strjoin((const char *)bufin, buf);
 		free(tmp);
 		if (!bufin)
 			return (0);
@@ -66,7 +66,7 @@ char	*ft_making_buf(int const fd, char *bufin, int *ret)
 	return (bufin);
 }
 
-int		ft_last_line(char **line, char *buf)
+int	ft_last_line(char **line, char *buf)
 {
 	*line = ft_strdup(buf);
 	free(buf);
@@ -75,7 +75,7 @@ int		ft_last_line(char **line, char *buf)
 	return (0);
 }
 
-int		get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static char	*buf;
 	int			ret;
